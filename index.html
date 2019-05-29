@@ -1,0 +1,53 @@
+<!--Startpage by Tayumpee-->
+<!--facebook.com/yourwaterlord-->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Date and Time</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript">
+			function show( show1 ) {
+			  document.getElementById(show1).style.display="block";
+			}
+			function hide( hide1 ) {
+			  document.getElementById(hide1).style.display="none";
+			}
+			function tog( tog1 ) {
+			  document.getElementById(tog1).style.backgroundColor="#777777";
+			}
+			function toh( toh1 ) {
+			  document.getElementById(toh1).style.backgroundColor="#ffffff";
+			}
+		</script>
+	</head>
+	<body OnLoad="document.form1.q.focus();">	
+			    <div class="time" id="time">
+				    <script>
+					    //document.getElementById("main").innerHTML = Date();
+					    function updateClock() {
+						    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+						    var m = new Date();
+						    var dateString =
+						      (days[ m.getDay() ]) + " " +
+						      ("0" + m.getDate()).slice(-2) + "/" +
+						      ("0" + (m.getMonth()+1)).slice(-2) +"/"+
+						      m.getFullYear() +" "+
+						      ("0" + m.getHours()).slice(-2) + ":" +
+						      ("0" + m.getMinutes()).slice(-2) + ":" +
+						      ("0" + m.getSeconds()).slice(-2);
+						
+						    // set the content of the element with the ID time to the formatted string
+						    document.getElementById('time').innerHTML = dateString;
+
+						    // call this function again in 1000ms
+						    setTimeout(updateClock, 1000);
+					    }
+					    updateClock(); // initial call
+			    	    </script>
+			    </div>  
+		</div>
+	</body>
+</html>
