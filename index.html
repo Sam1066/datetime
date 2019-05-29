@@ -24,30 +24,35 @@
 		</script>
 	</head>
 	<body OnLoad="document.form1.q.focus();">	
-			    <div class="time" id="time">
-				    <script>
-					    //document.getElementById("main").innerHTML = Date();
-					    function updateClock() {
-						    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-						    var m = new Date();
-						    var dateString =
-						      (days[ m.getDay() ]) + " " +
-						      ("0" + m.getDate()).slice(-2) + "/" +
-						      ("0" + (m.getMonth()+1)).slice(-2) +"/"+
-						      m.getFullYear() +" "+
-						      ("0" + m.getHours()).slice(-2) + ":" +
-						      ("0" + m.getMinutes()).slice(-2) + ":" +
-						      ("0" + m.getSeconds()).slice(-2);
+		<div class="default" id="main">
+			<div id="weather" style="display: inline-block">
+			    <script type='text/javascript' src='https://darksky.net/widget/small/51.4515,-0.9836/uk12/en.js?width=100%&height=200&title=Reading&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=uk'></script>
+			</div>
+			<div class="time" id="time" style="display: inline-block">
+				<script>
+					//document.getElementById("main").innerHTML = Date();
+					function updateClock() {
+					var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+					var m = new Date();
+					var dateString =
+						(days[ m.getDay() ]) + " " +
+						("0" + m.getDate()).slice(-2) + "/" +
+						("0" + (m.getMonth()+1)).slice(-2) +"/"+
+						m.getFullYear() +" "+
 						
-						    // set the content of the element with the ID time to the formatted string
-						    document.getElementById('time').innerHTML = dateString;
+						("0" + m.getHours()).slice(-2) + ":" +
+						("0" + m.getMinutes()).slice(-2) + ":" +
+						("0" + m.getSeconds()).slice(-2);
+						
+					// set the content of the element with the ID time to the formatted string
+					document.getElementById('time').innerHTML = dateString;
 
-						    // call this function again in 1000ms
-						    setTimeout(updateClock, 1000);
-					    }
-					    updateClock(); // initial call
-			    	    </script>
-			    </div>  
+					// call this function again in 1000ms
+					setTimeout(updateClock, 1000);
+					}
+					updateClock(); // initial call
+				</script>
+			</div>
 		</div>
 	</body>
 </html>
