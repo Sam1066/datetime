@@ -1,5 +1,4 @@
 .default {
-		justify-content: top;
 }
 
 .weather {
@@ -8,12 +7,9 @@
 }
 
 .time {
-	margin-top: -200px;
-	margin-top: -160px;
-	display: inline-block;
-	color:#ffffff;
+	margin-top: -180px;
+	color:#000000;
 	font-family: Arial;
 	font-size:70px;
 	text-align: center;
-	vertical-align: center;
 }
