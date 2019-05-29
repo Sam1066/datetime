@@ -4,12 +4,14 @@
 
 .weather {
 	display: inline-block;
+	background-color: #ffffff;
 }
 
 .time {
+	margin-top: -200px;
 	margin-top: -160px;
 	display: inline-block;
-	color:#000000;
+	color:#ffffff;
 	font-family: Arial;
 	font-size:70px;
 	text-align: center;
